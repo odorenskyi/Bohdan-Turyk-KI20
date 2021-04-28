@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include "lib82.h"
 
 using namespace std;
 
