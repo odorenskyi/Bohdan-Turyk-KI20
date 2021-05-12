@@ -17,10 +17,10 @@ int calc()
     cout << "a <= b-32 ?\n¬ведiть: a, b : ";
     cin >> a >> b;
     if(a <= b - 32){
-        c = 1;
+        c == 1;
         cout << "–езультат: ";
     }else{
-        c = 0;
+        c == 0;
         cout << "–езультат: ";
     }
     return c;
@@ -30,21 +30,39 @@ int calc()
 int s_calculation()
 {
     cout << "\n\n«адача 8.2.3";
-    cout << "\nѕеревiд чисел в шiстнадц€тирiчну систему";
+    cout << "\nѕеревiд чисел в шiстнадц€ткову систему";
     int x, y, z;
-    cout << "\n¬ведiть x: "; cin >> x;
+
+do{
+    cout << "\nx y z не можуть дорiвнювати 0 одночасно\n";
+    x = 0;
+    y = 0;
+    z = -1;
+    cout << "¬ведiть x: ";
+    cin >> x;
     cout << "–езультат: " << hex << x << endl;
-    cout << "¬ведiть y: "; cin >> y;
+    cout << "¬ведiть y: ";
+    cin >> y;
     cout << "–езультат: " << hex << y << endl;
-    cout << "¬ведiть z: "; cin>>z;
+    while(z < 0){
+        cout << "¬ведiть додатнЇ z: ";
+        cin >> z;
+    }
+    if(x == 0 && y == 0 && z == 0){
+        cout << "\n¬ведiть x y z знову";
+    }
+}
+while(x == 0 && y == 0 && z == 0);
     cout << "–езультат: "<< hex << z << endl;
     cout << "\n«адача 8.1\n";
     double a, b, c, d, S;
+    cout << "\nx = "<< dec << x << " y = "<< dec << y << " z = "<< dec << z;
     a = pow(x, 2) - pow(y, 3);
     b =(z*z) * pow(2.718281828, x);
     c = 12 * x + ((y*y)-3.14* sqrtl(z));
     d = b / c;
     S = a + sqrtl(d);
-    cout << "S = " << S << "\n";
+    cout << "\nS = " << S << "\n";
+    system("pause");
     return 0;
 }
